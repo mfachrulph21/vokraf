@@ -1,0 +1,12 @@
+{
+    "development" : {
+        "sql" :{
+            "host" : "127.0.0.1",
+            "database" : "vokraf_db",
+            "username" : "postgres",
+            "password" : "postgres",
+            "dialect" : "postgres",
+            "port" : "5432"
+        }
+    }
+}
