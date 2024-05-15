@@ -12,39 +12,16 @@ module.exports = function (sequelize, DataTypes) {
       title: {
         type: DataTypes.STRING(255),
         allowNull: false,
-        validate : {
-            notNull : {
-                msg : "Title is required"
-            },
-            notEmpty : {
-                msg : "Title is required"
-            }
-        }
       },
       description: {
         type: DataTypes.STRING(255),
         allowNull: false,
-        validate : {
-            notNull : {
-                msg : "Description is required"
-            },
-            notEmpty : {
-                msg : "Description is required"
-            }
-        }
       },
       point: {
         type: DataTypes.INTEGER,
-        allowNull: false,validate : {
-            notNull : {
-                msg : "Point is required"
-            },
-            notEmpty : {
-                msg : "Point is required"
-            }
-        }
+        allowNull: false,
       },
-      status : DataTypes.ENUM('To do', 'In Proggress', 'In Review', 'Done'),
+      status: DataTypes.ENUM("To do", "In Proggress", "In Review", "Done"),
       created_at: DataTypes.DATE,
     },
     {

@@ -12,35 +12,20 @@ module.exports = function (sequelize, DataTypes) {
       name: {
         type: DataTypes.STRING(255),
         allowNull: false,
-        validate : {
-            notNull : {
-                msg : "Name is required"
-            },
-            notEmpty : {
-                msg : "Email is required"
-            }
-        }
       },
       email: {
         type: DataTypes.STRING(255),
         allowNull: false,
         unique: true,
-        validate : {
-            notNull : {
-                msg : "Email is required"
-            },
-            notEmpty : {
-                msg : "Email is required"
-            },
-            isEmail : {
-                msg : "Wrong format email"
-            }
-        }
+      },
+      password: {
+        type: DataTypes.STRING(255),
       },
       image: {
-        type : DataTypes.STRING,
-        defaultValue : 'https://iio.azcast.arizona.edu/sites/default/files/profile-blank-whitebg.png'
-      }
+        type: DataTypes.STRING,
+        defaultValue:
+          "https://iio.azcast.arizona.edu/sites/default/files/profile-blank-whitebg.png",
+      },
     },
     {
       tableName: "users",

@@ -11,17 +11,10 @@ module.exports = function (sequelize, DataTypes) {
       },
       title: {
         type: DataTypes.STRING(255),
-        allowNull: false,
-        validate : {
-            notNull : {
-                msg : "Name is required"
-            },
-            notEmpty : {
-                msg : "Email is required"
-            }
-        }
+        allowNull: false
       },
-      Date: DataTypes.DATE,
+      date: DataTypes.DATE,
+      user : DataTypes.STRING(255)
     },
     {
       tableName: "histories",
